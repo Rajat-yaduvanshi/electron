@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARISTA - TEST TOOL</title>
+    <style>
+      /* Global Styles */
+      /* body {
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        box-sizing: border-box;
+        transition: background 0.5s ease-in-out;
+      } */
+
+      /* Header Styles */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1s ease-out;
+      }
+
+      .header img {
+        height: 60px;
+        width: auto;
+      }
+
+      .header span {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #0072ff;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 1s ease-out;
+      }
+
+      /* Container Styles */
+      .container {
+        background: #ffffff;
+        border-radius: 18px;
+        padding: 2.5rem;
+        /* box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); */
+        width: 99%;
+        height: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        /* overflow: auto; */
+        transition: transform 0.3s ease-in-out;
+      }
+
+      /* Title Styles */
+      h1 {
+        font-size: 3.5rem;
+        color: #0072ff;
+        margin-bottom: 1.5rem;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1s ease-out;
+      }
+
+      h2 {
+        font-size: 2rem;
+        color: #0072ff;
+        margin-bottom: 1.5rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Input Styles - Smaller and More Attractive */
+      input[type="text"] {
+        width: 70%;
+        max-width: 500px;
+        padding: 0.9rem;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        border-radius: 10px;
+        border: 2px solid #ddd;
+        outline: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      input[type="text"]:focus {
+        border-color: #0072ff;
+        box-shadow: 0 0 8px rgba(0, 114, 255, 0.3);
+        transform: translateY(-3px);
+      }
+
+      /* Button Styles - Smaller and More Attractive */
+      button {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+        background-color: #0072ff;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(0);
+      }
+
+      button:hover {
+        background-color: #0056b3;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        transform: translateY(-3px);
+      }
+
+      /* Output Styles */
+      pre {
+        background: #f9f9f9;
+        padding: 1.5rem;
+        border-radius: 12px;
+        text-align: left;
+        font-family: 'Courier New', monospace;
+        color: #333;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        margin-top: 2rem;
+        min-height: 150px;
+        overflow-y: auto;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .container {
+          width: 90vw;
+          padding: 1.5rem;
+        }
+
+        .header img {
+          height: 40px;
+        }
+
+        .header span {
+          font-size: 1.8rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        input[type="text"] {
+          width: 90%;
+          font-size: 1rem;
+        }
+
+        button {
+          width: 100%;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header with Logos and Text -->
+      <div class="header">
+        <img src="logo/VVDN.webp" alt="Left Logo" />
+        <span>TEST TOOL</span>
+        <img src="logo/Arista.webp" alt="Right Logo" />
+      </div>
+
+      <h2>PRODUCT : PIKE</h2>
+      <input
+        type="text"
+        id="serialNumber"
+        placeholder="Scan Serial Number"
+      />
+      <button id="runPython">Execute</button>
+      <h3>Output:</h3>
+      <pre id="output"></pre>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

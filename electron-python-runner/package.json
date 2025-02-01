@@ -1,0 +1,12 @@
+{
+  "name": "electron-python-runner",
+  "version": "1.0.0",
+  "description": "An Electron app to run a Python script",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron --disable-gpu ."
+  },
+  "devDependencies": {
+    "electron": "^27.0.0"
+  }
+}

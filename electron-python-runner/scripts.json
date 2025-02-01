@@ -1,0 +1,7 @@
+{
+  "scripts": [
+    { "name": "scripts/test.py", "order": 1 },
+    { "name": "scripts/script2.py", "order": 2 },
+    { "name": "scripts/script3.py", "order": 3 }
+  ]
+}
